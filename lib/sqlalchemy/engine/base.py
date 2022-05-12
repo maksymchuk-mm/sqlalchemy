@@ -1471,7 +1471,7 @@ class Connection(Connectable):
         if distilled_params:
             # ensure we don't retain a link to the view object for keys()
             # which links to the values, which we don't want to cache
-            keys = sorted(distilled_params[0])
+            keys = sorted(distilled_params[0].keys())
             for_executemany = len(distilled_params) > 1
         else:
             keys = []
